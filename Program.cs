@@ -2,7 +2,9 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using courseTable2.Data;
 
-var builder = WebApplication.CreateBuilder(args);
+class Program {
+public static void Main(string[] args){
+ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
@@ -27,5 +29,10 @@ app.UseRouting();
 
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
+Test test = new Test();
+test.doTest();
 
 app.Run();
+}
+
+}
